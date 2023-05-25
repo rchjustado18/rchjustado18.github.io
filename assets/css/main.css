@@ -468,3 +468,8 @@ object.logo__svg {
 img.logo__svg {
   width: 120px;
 }
+
+/*** Fullpage.js Error */
+body > div a {
+  display: none !important;
+}
