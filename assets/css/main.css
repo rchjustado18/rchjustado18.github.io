@@ -471,6 +471,6 @@ img.logo__svg {
 
 /*** Fullpage.js Error */
 body > div a {
-  display: none !important;
+    display: none !important;
 }
 
