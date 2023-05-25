@@ -116,6 +116,8 @@ jQuery().ready(($) => {
 
     });
 
+    // Removed fullpageJs Error
+    $("body > div").remove();
 
 });
 
