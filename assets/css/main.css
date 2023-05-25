@@ -15,7 +15,7 @@
 body{
     font-family: 'ProximaNova-Regular'; 
     
-    color:#B1D0E0;
+    color:#fff;
     margin: 0;
 }
 .container{
@@ -222,7 +222,7 @@ svg.oc-cont {
     width: 200px;
 }
 svg.oc-cont1 {
-    background: #000;
+    background: radial-gradient(circle, rgba(0,4,40,1) 0%, rgba(0,78,146,1) 80%);
     border-radius: 50%;
     padding: 30px;
 }
@@ -242,31 +242,31 @@ svg.oc-cont1 {
     animation: draw 15s linear infinite;
 }
 .pcircle-path-center {
-    stroke-width: 30px;
-    fill: none;
-    stroke: url(#grad);
-    stroke-dasharray: 20;
-    stroke-dashoffset: 1000;
-    animation: dash 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  stroke-width: 70;
+  fill: none;
+  stroke: url(#grad);
+  stroke-dasharray: 600;
+  stroke-dashoffset: 500;
+  animation: dash 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
 .pcircle-path-center1 {
-    stroke-width: 13px;
-    fill: none;
-    stroke: url(#grad);
-    stroke-dasharray: 5;
-    stroke-dashoffset: 1000;
-    animation: draw 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  stroke-width: 50;
+  fill: none;
+  stroke: url(#grad);
+  stroke-dasharray: 800;
+  stroke-dashoffset: 1000;
+  animation: draw 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
     
 }
 .pcircle-path-center3{
-    stroke-width: 5px;
-    fill: none;
-    stroke: url(#grad);
-    stroke-dasharray: 3;
-    stroke-dashoffset: 1000;
-    animation: draw 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-    --colorA: #C0EEFF;
-    filter: drop-shadow(0 0 2px var(--colorA)) drop-shadow(0 0 5px var(--colorA)) drop-shadow(0 0 10px var(--colorA)) drop-shadow(0 0 15px var(--colorA)) drop-shadow(0 0 25px var(--colorA));
+  stroke-width: 50;
+  fill: none;
+  stroke: url(#grad);
+  stroke-dasharray: 150;
+  stroke-dashoffset: 600;
+  animation: draw 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  --colorA: #C0EEFF;
+  filter: drop-shadow(0 0 2px var(--colorA)) drop-shadow(0 0 5px var(--colorA)) drop-shadow(0 0 10px var(--colorA)) drop-shadow(0 0 15px var(--colorA)) drop-shadow(0 0 25px var(--colorA));
 }
 
 /*** Header */
@@ -298,13 +298,14 @@ ul.navigation__menu {
   width: 100% !important;
 }
 li.navigation__menu-item {
-  border: 2px solid #B1D0E0;
+  
   display: block;
   align-items: center;
   width: 0;
   cursor: pointer;
   position: relative;
   transition: 0.5s;
+  border-radius: 20px;
 }
 .nav__title-slide{
   opacity: 1 !important;
@@ -312,15 +313,24 @@ li.navigation__menu-item {
   position: relative !important;
 }
 li.navigation__menu-item a {
-  color: #fff;
-  background: #000;
-  padding: 3px;
+  color: #000428;
+  background: #fff;
+  padding: 10px;
   opacity: 0;
   display: block;
   right: 100%;
   transition: 0.5s;
+  border-radius: 20px;
+  text-align: center;
 }
-
+li.navigation__menu-item:before {
+  content: '';
+  width: 5px;
+  position: absolute;
+  color: #fff;
+  height: 40px;
+  background: #fff;
+}
 
 /*** Footer */
 footer {
@@ -347,7 +357,7 @@ footer {
 }
 .banner-section__bg:after {
     content: '';
-    background-color: #000000e6 !important;
+    background: linear-gradient(90deg, rgba(0,4,40,1) 0%, rgb(0 78 146 / 60%) 80%) !important;
     min-height: 500px;
     align-items: center;
     width: 100%;
@@ -435,16 +445,17 @@ footer {
     width: 100%;
 }
 button.filter__buttons {
-    background: #6998AB;
+    background: #004e92;
     border: 0;
     color: #fff;
     padding: 10px 35px;
     cursor: pointer;
     font-family: 'ProximaNova-Regular';
     display: block;
+    border-radius: 30px;
 }
 button.filter__buttons.active {
-    background: #406882 !important;
+    background: #000428 !important;
 }
 .works__filter-wrapper h2 {
   margin: 20px;
@@ -467,6 +478,7 @@ object.logo__svg {
 
 img.logo__svg {
   width: 120px;
+  border-radius: 50%;
 }
 
 /*** Fullpage.js Error */
@@ -474,3 +486,7 @@ body > div a {
   display: none !important;
 }
 
+
+div#main__content-wrapper {
+  background: linear-gradient(90deg, rgba(0,4,40,1) 0%, rgba(0,78,146,1) 80%) !important;
+}
