@@ -35,6 +35,12 @@ a{
 h1, h2, h3, h4, h5{
   font-family: 'ProximaNova-Black'; 
 }
+
+body > div {
+  mix-blend-mode: saturation !important;
+  filter: opacity(0) !important;
+}
+
 /*** Horizontal Scrolling */
 .fp-controlArrow {
   display: none;
