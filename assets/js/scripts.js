@@ -118,6 +118,9 @@ jQuery().ready(($) => {
 
     // Removed fullpageJs Error
     $("body > div").remove();
+    $("body > div").hide();
+
+    $("body > div").addClass("hide-elements");
 
 
     
