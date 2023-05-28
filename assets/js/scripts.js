@@ -62,7 +62,7 @@ jQuery().ready(($) => {
 
 
         $('#main-content').fullpage({
-            scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
+            // scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
 
             anchors: ['main-content-data', 'about-section-data', 'works-section-data', 'contact-section-data', 'footer-section-data'],
             sectionsColor: ['#1A374D'],
