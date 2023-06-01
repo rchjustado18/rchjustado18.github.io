@@ -112,7 +112,7 @@ jQuery().ready(($) => {
         
         var translateX = mouseX * maxDeltaX,
         translateY = mouseY * maxDeltaY;
-        $('.about__col, svg.oc-cont1').css('transform', 'translate('+translateX+'px, '+translateY+'px)');
+        $('svg.oc-cont1').css('transform', 'translate('+translateX+'px, '+translateY+'px)');
 
     });
 
