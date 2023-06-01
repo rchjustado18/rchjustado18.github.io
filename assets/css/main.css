@@ -19,7 +19,7 @@ body{
     margin: 0;
 }
 .container{
-    max-width: 1640px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
 }
@@ -389,7 +389,8 @@ footer {
 .banner__txt h1 {
   font-size: 70px;
   text-transform: uppercase;
-  margin-bottom: 0;
+  line-height: 65px;
+  margin-bottom: 25px;
   letter-spacing: 5px;
 }
 .banner__txt p {
@@ -427,17 +428,25 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    height: 100%;
 }
-.about__col {
-    width: 100%;
+.about__col-img {
+    width: 60%;
 }
-.about__col img {
+.about__col-txt {
+  width: 40%;
+  height: 100%;
+  padding-left: 50px;
+}
+.about__col-img img {
   display: block;
   margin: 0 auto;
   border-radius: 30px;
 }
-
+.about__col-img img {
+  width: 100%;
+  object-fit: cover;
+}
 
 /*** Works */
 .works__filter-wrapper h2 {
