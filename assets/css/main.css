@@ -413,6 +413,11 @@ footer {
 }
 
 /*** About */
+section#about-section\ slide2.active ul.about__list-wrap {
+  width: 40% !important;
+  opacity: 1 !important;
+}
+
 .about__col h2 , .contact__wrapper h2{
   font-size: 40px;
 }
@@ -452,21 +457,65 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 0;
+  opacity: 0;
   height: 100%;
   background: linear-gradient(90deg, rgba(0,4,40,1) 30%, rgb(0 78 146) 100%) !important;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   padding: 0 30px 0 45px;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+section#about-section\ slide2.active .about__list-item:first-child {
+  opacity: 1 !important;
+  bottom: 0 !important;
+  transition: all 0.2s ease-in-out;
+}
+section#about-section\ slide2.active .about__list-item:nth-child(2) {
+  opacity: 1 !important;
+  bottom: 0 !important;
+  transition: all 0.4s ease-in-out;
+}
+section#about-section\ slide2.active .about__list-item:nth-child(3) {
+  opacity: 1 !important;
+  bottom: 0 !important;
+  transition: all 0.6s ease-in-out;
+}
+section#about-section\ slide2.active .about__list-item:nth-child(4) {
+  opacity: 1 !important;
+  bottom: 0 !important;
+  transition: all 0.8s ease-in-out;
+}
+section#about-section\ slide2.active .about__list-item:nth-child(5) {
+  opacity: 1 !important;
+  bottom: 0 !important;
+  transition: all 1s ease-in-out;
+}
+section#about-section\ slide2.active .about__list-item:nth-child(6) {
+  opacity: 1 !important;
+  bottom: 0 !important;
+  transition: all 1.2s ease-in-out;
+}
+section#about-section\ slide2.active .about__list-item:nth-child(7) {
+  opacity: 1 !important;
+  bottom: 0 !important;
+  transition: all 1.4s ease-in-out;
+}
+section#about-section\ slide2.active .about__list-item:nth-child(8) {
+  opacity: 1 !important;
+  bottom: 0 !important;
+  transition: all 1.6s ease-in-out;
+}
+.about__list-item {
+  opacity: 0;
+  bottom: -30px;
 }
 .about__list-item {
   padding: 25px 0 0;
   font-size: 18px;
   position: relative;
   left: 0;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .about__list-item:before {
   content: '';
@@ -479,10 +528,10 @@ footer {
   top: 31px;
   transition: all 0.5s ease-in-out;
 }
-.about__list-item:hover{
+/* .about__list-item:hover{
   left: 15px !important;
   transition: all 0.5s ease-in-out;
-}
+} */
 .about__col-txt p {
   line-height: 25px;
 }
