@@ -60,6 +60,7 @@ jQuery().ready(($) => {
 
     // Fullpage Scrolling
 
+    // if($(window).width() < 1300){ $('#main-content').removeAttr('id'); }
 
         $('#main-content').fullpage({
             scrollHorizontallyKey: 'YWx2YXJvdHJpZ28uY29tX01mU2MyTnliMnhzU0c5eWFYcHZiblJoYkd4NVNRcg==',
@@ -77,6 +78,8 @@ jQuery().ready(($) => {
             //     animateContent: true,
             //     animateOnMouseMove: true
             // }
+
+            
             
         });
     
@@ -100,21 +103,21 @@ jQuery().ready(($) => {
 
     // Settings
     // Maximum offset for image
-    var maxDeltaX = 50,
-    maxDeltaY = 50;
-    $(document).on('mousemove', function(e) {
+    // var maxDeltaX = 50,
+    // maxDeltaY = 50;
+    // $(document).on('mousemove', function(e) {
 
-        var viewportWidth = document.documentElement.clientWidth,
-        viewportHeight = document.documentElement.clientHeight;
+    //     var viewportWidth = document.documentElement.clientWidth,
+    //     viewportHeight = document.documentElement.clientHeight;
 
-        var mouseX = e.pageX / viewportWidth * 2 - 1,
-        mouseY = e.pageY / viewportHeight * 2 - 1;
+    //     var mouseX = e.pageX / viewportWidth * 2 - 1,
+    //     mouseY = e.pageY / viewportHeight * 2 - 1;
         
-        var translateX = mouseX * maxDeltaX,
-        translateY = mouseY * maxDeltaY;
-        $('svg.oc-cont1').css('transform', 'translate('+translateX+'px, '+translateY+'px)');
+    //     var translateX = mouseX * maxDeltaX,
+    //     translateY = mouseY * maxDeltaY;
+    //     $('svg.oc-cont1').css('transform', 'translate('+translateX+'px, '+translateY+'px)');
 
-    });
+    // });
 
     // Removed fullpageJs Error
     $("body > div").remove();

@@ -1,4 +1,30 @@
 /*** Mobile Responsive ***/
+@media only screen and (max-width: 1300px){
+    /* .slide {
+        padding-left: 160px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .slide .container {
+        padding: 0 30px;
+    }
+    .banner__wrapper, .about__wrapper {
+        flex-direction: column;
+    }
+    .banner__txt, .banner__image, .about__col-img, .about__col-txt {
+        width: 100%;
+    }
+    .banner__txt h1 {
+        font-size: 50px;
+        line-height: 45px;
+    }
+    .about__col-txt{
+        padding: 50px 0;
+    }
+    .filter__content {
+        width: 100% !important;
+    } */
+}
 @media only screen and (max-width: 1024px){
     
 }
