@@ -1,0 +1,419 @@
+---
+import "../styles/global.css";
+
+const skills = [
+  "WordPress",
+  "Elementor",
+  "Divi",
+  "PHP",
+  "Custom Post Types",
+  "Advanced Custom Fields",
+  "WooCommerce",
+  "Shopify",
+  "Go High Level",
+  "Automations",
+  "Google Tag Manager",
+  "Google Analytics",
+  "Astro",
+  "AI Coding",
+  "CSS",
+  "Javascript / jQuery",
+  "SEO & Optimization",
+  "SVG Animations"
+];
+
+const projects = [
+  {
+    title: "All South Bay Footcare",
+    url: "https://www.allsouthbayfootcare.com/",
+    image: "/assets/images/allsouthbayfootcare.png",
+    categories: ["divi"]
+  },
+  {
+    title: "Direct Dental",
+    url: "https://www.dentistinpicorivera.com/",
+    image: "/assets/images/dentistinpicorivera.png",
+    categories: ["divi"]
+  },
+  {
+    title: "Eazy Foot & Ankle",
+    url: "https://eazyfoot.com/",
+    image: "/assets/images/eazyfoot.png",
+    categories: ["elementor"]
+  },
+  {
+    title: "Lower Mainland Biodiesel",
+    url: "https://lowermainlandbiodiesel.com",
+    image: "/assets/images/lowermainlandbiodiesel.png",
+    categories: ["divi"]
+  }
+];
+
+const navItems = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Works", href: "#works" },
+  { label: "Contact", href: "#contact" }
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Richie Justado, a web developer focused on WordPress, Elementor, Divi, Shopify, Astro, automation, analytics, optimization, and AI-assisted coding."
+    />
+    <title>Richie Justado | Web Developer</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#home" aria-label="Richie Justado home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="/assets/images/richie_img.png" alt="" width="44" height="44" />
+        </span>
+        <span>Richie Justado</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        {
+          navItems.map((item) => (
+            <a href={item.href} data-nav-link>
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+
+    <main>
+      <section class="snap-section hero" id="home" data-section aria-labelledby="home-title">
+        <div class="motion-scene hero-scene" aria-hidden="true">
+          <svg viewBox="0 0 1200 900" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="hero-circuit" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#2fffd0"></stop>
+                <stop offset="52%" stop-color="#8bd450"></stop>
+                <stop offset="100%" stop-color="#ffb454"></stop>
+              </linearGradient>
+              <linearGradient id="hero-chip-face" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#1c2530"></stop>
+                <stop offset="100%" stop-color="#07090d"></stop>
+              </linearGradient>
+            </defs>
+            <g class="scene-layer scene-layer-slow">
+              <path class="circuit-line" d="M-40 660 H155 V540 H330 V455 H520 V340 H680"></path>
+              <path class="circuit-line muted" d="M55 210 H210 V290 H380 V210 H560 V120 H850"></path>
+              <path class="circuit-line muted" d="M760 735 H905 V620 H1095 V510 H1240"></path>
+              <path class="circuit-line" d="M620 820 V705 H720 V575 H845 V455 H1110"></path>
+              <path id="hero-signal-path" class="signal-track" d="M170 735 H390 V625 H575 V498 H790"></path>
+            </g>
+            <g class="scene-layer scene-layer-fast">
+              <rect class="scene-chip large-chip" x="750" y="230" width="230" height="170" rx="14"></rect>
+              <rect class="scene-chip small-chip" x="925" y="535" width="165" height="120" rx="12"></rect>
+              <path class="chip-pins" d="M724 258 H750 M724 292 H750 M724 326 H750 M724 360 H750"></path>
+              <path class="chip-pins" d="M980 258 H1008 M980 292 H1008 M980 326 H1008 M980 360 H1008"></path>
+              <path class="chip-pins" d="M894 560 H925 M894 595 H925 M894 630 H925"></path>
+              <circle class="scene-node node-a" cx="330" cy="455" r="11"></circle>
+              <circle class="scene-node node-b" cx="560" cy="120" r="14"></circle>
+              <circle class="scene-node node-c" cx="1110" cy="455" r="16"></circle>
+              <circle class="signal-dot" r="10">
+                <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#hero-signal-path"></mpath>
+                </animateMotion>
+              </circle>
+            </g>
+            <g class="scene-code">
+              <text x="782" y="325">ASTRO</text>
+              <text x="950" y="608">AI</text>
+              <text x="690" y="720">TRACK</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="section-inner hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Portfolio</p>
+            <h1 id="home-title">Richie Justado</h1>
+            <p class="hero-role">Web Developer & Automation Builder</p>
+            <p class="hero-summary">
+              I build polished, conversion-focused websites with practical automation, analytics,
+              and AI-assisted workflows behind them.
+            </p>
+            <div class="hero-actions" aria-label="Portfolio actions">
+              <a class="button button-primary" href="#works">View Works</a>
+              <a class="button button-secondary" href="mailto:rchjustado@gmail.com">Email Me</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Technology system illustration">
+            <div class="chip-panel">
+              <svg class="processor-svg" viewBox="0 0 520 520" role="img" aria-labelledby="processor-title">
+                <title id="processor-title">Modern processor chip and circuit illustration</title>
+                <defs>
+                  <linearGradient id="processor-core" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#2fffd0"></stop>
+                    <stop offset="50%" stop-color="#8bd450"></stop>
+                    <stop offset="100%" stop-color="#ffb454"></stop>
+                  </linearGradient>
+                  <linearGradient id="processor-glass" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#18212b"></stop>
+                    <stop offset="100%" stop-color="#080b10"></stop>
+                  </linearGradient>
+                </defs>
+                <g class="board-grid">
+                  <path d="M45 115 H135 V70 H220"></path>
+                  <path d="M38 382 H145 V435 H230"></path>
+                  <path d="M288 72 H390 V128 H486"></path>
+                  <path d="M312 445 H402 V370 H490"></path>
+                  <path d="M70 260 H158"></path>
+                  <path d="M362 260 H468"></path>
+                  <path d="M260 60 V148"></path>
+                  <path d="M260 372 V462"></path>
+                </g>
+                <g class="board-nodes">
+                  <circle cx="220" cy="70" r="8"></circle>
+                  <circle cx="230" cy="435" r="8"></circle>
+                  <circle cx="486" cy="128" r="8"></circle>
+                  <circle cx="490" cy="370" r="8"></circle>
+                  <circle cx="70" cy="260" r="8"></circle>
+                  <circle cx="468" cy="260" r="8"></circle>
+                </g>
+                <rect class="chip-shell" x="150" y="150" width="220" height="220" rx="22"></rect>
+                <path class="pins pins-left" d="M122 183 H150 M122 218 H150 M122 253 H150 M122 288 H150 M122 323 H150"></path>
+                <path class="pins pins-right" d="M370 183 H398 M370 218 H398 M370 253 H398 M370 288 H398 M370 323 H398"></path>
+                <path class="pins pins-top" d="M183 122 V150 M218 122 V150 M253 122 V150 M288 122 V150 M323 122 V150"></path>
+                <path class="pins pins-bottom" d="M183 370 V398 M218 370 V398 M253 370 V398 M288 370 V398 M323 370 V398"></path>
+                <rect class="chip-core" x="202" y="202" width="116" height="116" rx="18"></rect>
+                <path class="core-lines" d="M225 238 H294 M225 260 H294 M225 282 H274"></path>
+              </svg>
+            </div>
+            <div class="hero-facts" aria-label="Portfolio highlights">
+              <span><strong>6+</strong> years experience</span>
+              <span><strong>4</strong> featured works</span>
+              <span><strong>AI</strong> assisted delivery</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="snap-section about" id="about" data-section aria-labelledby="about-title">
+        <div class="section-inner about-grid">
+          <div class="about-media">
+            <img
+              src="/assets/images/about-img.jpeg"
+              alt="Developer working on website code"
+              width="1126"
+              height="750"
+            />
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow">Personal Profile</p>
+            <h2 id="about-title">Personal Profile</h2>
+            <p>
+              I am a Web Developer with 6+ years of experience creating fast, reliable websites for
+              service businesses, ecommerce brands, and lead-generation campaigns. My work combines
+              WordPress builders like Elementor and Divi with PHP, custom post types, WooCommerce,
+              Shopify, Astro, SVG animations, website optimization, SEO, and AI-assisted coding.
+            </p>
+            <p>
+              I also help connect the marketing side of a site: Go High Level, automations, Google
+              Tag Manager, and Google Analytics, so the build is easier to launch, track, and improve.
+            </p>
+            <ul class="skill-list" aria-label="Skills">
+              {skills.map((skill) => <li>{skill}</li>)}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="snap-section works" id="works" data-section aria-labelledby="works-title">
+        <div class="section-inner works-inner">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Selected Projects</p>
+              <h2 id="works-title">Works</h2>
+            </div>
+            <p class="section-lede">
+              A focused set of recent WordPress builds across Divi and Elementor.
+            </p>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filter works">
+            <button class="filter-button active" type="button" data-filter-button="all" aria-pressed="true">
+              All
+            </button>
+            <button class="filter-button" type="button" data-filter-button="divi" aria-pressed="false">
+              Divi
+            </button>
+            <button class="filter-button" type="button" data-filter-button="elementor" aria-pressed="false">
+              Elementor
+            </button>
+          </div>
+
+          <div class="project-grid">
+            {
+              projects.map((project) => (
+                <article class="project-card" data-project-card data-categories={project.categories.join(" ")}>
+                  <a href={project.url} target="_blank" rel="noreferrer">
+                    <span class="browser-frame">
+                      <span class="frame-top" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </span>
+                      <img src={project.image} alt={`${project.title} website screenshot`} />
+                    </span>
+                    <span class="project-info">
+                      <span class="project-title">{project.title}</span>
+                      <span class="project-tags">{project.categories.join(" / ")}</span>
+                    </span>
+                  </a>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section class="snap-section contact" id="contact" data-section aria-labelledby="contact-title">
+        <div class="motion-scene contact-scene" aria-hidden="true">
+          <svg viewBox="0 0 1200 900" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="contact-circuit" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#2fffd0"></stop>
+                <stop offset="55%" stop-color="#ffb454"></stop>
+                <stop offset="100%" stop-color="#ff6b5f"></stop>
+              </linearGradient>
+            </defs>
+            <g class="scene-layer scene-layer-slow">
+              <path class="circuit-line" d="M-70 690 H160 V590 H330 V470 H555 V360 H720"></path>
+              <path class="circuit-line muted" d="M120 820 H350 V735 H540 V655 H790 V545 H1230"></path>
+              <path class="circuit-line muted" d="M610 165 H780 V260 H980 V210 H1270"></path>
+              <path id="contact-signal-path" class="signal-track" d="M255 625 H430 V535 H590 V430 H790"></path>
+            </g>
+            <g class="scene-layer scene-layer-fast">
+              <rect class="scene-chip contact-chip" x="790" y="330" width="250" height="170" rx="14"></rect>
+              <path class="chip-pins" d="M760 365 H790 M760 400 H790 M760 435 H790 M1040 365 H1070 M1040 400 H1070 M1040 435 H1070"></path>
+              <circle class="scene-node node-d" cx="555" cy="360" r="14"></circle>
+              <circle class="scene-node node-e" cx="980" cy="210" r="18"></circle>
+              <circle class="signal-dot signal-dot-alt" r="9">
+                <animateMotion dur="6.5s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#contact-signal-path"></mpath>
+                </animateMotion>
+              </circle>
+            </g>
+            <g class="scene-code contact-code">
+              <text x="828" y="422">deploy()</text>
+              <text x="640" y="335">reply</text>
+            </g>
+          </svg>
+        </div>
+        <div class="section-inner contact-grid">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title">Let's Build Something Better</h2>
+            <p class="contact-copy">
+              Send the project details, the site goal, or the workflow you want to improve. I can
+              help turn it into a cleaner website, a better funnel, or a more measurable launch.
+            </p>
+          </div>
+          <div class="contact-details">
+            <a class="contact-link" href="mailto:rchjustado@gmail.com">
+              <span>Email</span>
+              <strong>rchjustado@gmail.com</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script is:inline>
+      const filterButtons = document.querySelectorAll("[data-filter-button]");
+      const projectCards = document.querySelectorAll("[data-project-card]");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.dataset.filterButton;
+
+          filterButtons.forEach((item) => {
+            const isActive = item === button;
+            item.classList.toggle("active", isActive);
+            item.setAttribute("aria-pressed", String(isActive));
+          });
+
+          projectCards.forEach((card) => {
+            const categories = card.dataset.categories.split(" ");
+            const isVisible = filter === "all" || categories.includes(filter);
+            card.classList.toggle("is-hidden", !isVisible);
+          });
+        });
+      });
+
+      const navLinks = document.querySelectorAll("[data-nav-link]");
+      const sections = document.querySelectorAll("[data-section]");
+      const root = document.documentElement;
+
+      window.addEventListener(
+        "pointermove",
+        (event) => {
+          const x = event.clientX / window.innerWidth - 0.5;
+          const y = event.clientY / window.innerHeight - 0.5;
+          root.style.setProperty("--motion-x", x.toFixed(3));
+          root.style.setProperty("--motion-y", y.toFixed(3));
+        },
+        { passive: true }
+      );
+
+      const setActiveNav = (id) => {
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+        });
+      };
+
+      let ticking = false;
+      const updateActiveFromScroll = () => {
+        const marker = window.innerHeight * 0.42;
+        let activeId = sections[0]?.id || "home";
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= marker && rect.bottom >= marker) {
+            activeId = section.id;
+          }
+        });
+
+        setActiveNav(activeId);
+        ticking = false;
+      };
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (ticking) {
+            return;
+          }
+
+          ticking = true;
+          window.requestAnimationFrame(updateActiveFromScroll);
+        },
+        { passive: true }
+      );
+
+      setActiveNav(window.location.hash.replace("#", "") || "home");
+
+      window.addEventListener("load", () => {
+        if (!window.location.hash) {
+          updateActiveFromScroll();
+          return;
+        }
+
+        const target = document.querySelector(window.location.hash);
+        target?.scrollIntoView({ block: "start" });
+        window.setTimeout(updateActiveFromScroll, 120);
+      });
+    </script>
+  </body>
+</html>
