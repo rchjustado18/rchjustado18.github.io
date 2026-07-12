@@ -14,8 +14,6 @@ const skills = [
   "Automations",
   "Google Tag Manager",
   "Google Analytics",
-  "Astro",
-  "AI Coding",
   "CSS",
   "Javascript / jQuery",
   "SEO & Optimization",
@@ -64,7 +62,7 @@ const navItems = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio of Richie Justado, a web developer focused on WordPress, Elementor, Divi, Shopify, Astro, automation, analytics, optimization, and AI-assisted coding."
+      content="Portfolio of Richie Justado, a web developer focused on WordPress, Elementor, Divi, Shopify, automation, analytics, optimization, and SVG animations."
     />
     <title>Richie Justado | Web Developer</title>
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
@@ -104,31 +102,35 @@ const navItems = [
               </linearGradient>
             </defs>
             <g class="scene-layer scene-layer-slow">
-              <path class="circuit-line" d="M-40 660 H155 V540 H330 V455 H520 V340 H680"></path>
-              <path class="circuit-line muted" d="M55 210 H210 V290 H380 V210 H560 V120 H850"></path>
-              <path class="circuit-line muted" d="M760 735 H905 V620 H1095 V510 H1240"></path>
-              <path class="circuit-line" d="M620 820 V705 H720 V575 H845 V455 H1110"></path>
-              <path id="hero-signal-path" class="signal-track" d="M170 735 H390 V625 H575 V498 H790"></path>
-            </g>
-            <g class="scene-layer scene-layer-fast">
-              <rect class="scene-chip large-chip" x="750" y="230" width="230" height="170" rx="14"></rect>
-              <rect class="scene-chip small-chip" x="925" y="535" width="165" height="120" rx="12"></rect>
-              <path class="chip-pins" d="M724 258 H750 M724 292 H750 M724 326 H750 M724 360 H750"></path>
-              <path class="chip-pins" d="M980 258 H1008 M980 292 H1008 M980 326 H1008 M980 360 H1008"></path>
-              <path class="chip-pins" d="M894 560 H925 M894 595 H925 M894 630 H925"></path>
-              <circle class="scene-node node-a" cx="330" cy="455" r="11"></circle>
-              <circle class="scene-node node-b" cx="560" cy="120" r="14"></circle>
-              <circle class="scene-node node-c" cx="1110" cy="455" r="16"></circle>
-              <circle class="signal-dot" r="10">
-                <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
-                  <mpath href="#hero-signal-path"></mpath>
+              <path id="hero-signal-a" class="circuit-line" d="M-40 660 H155 V540 H330 V455 H520 V340 H750"></path>
+              <path id="hero-signal-b" class="circuit-line muted" d="M55 210 H210 V290 H380 V210 H560 V120 H865 V230"></path>
+              <path id="hero-signal-c" class="circuit-line muted" d="M1240 470 H1090 V390 H980"></path>
+              <path id="hero-signal-d" class="circuit-line" d="M620 820 V705 H720 V575 H845 V400"></path>
+              <circle class="signal-dot" r="9">
+                <animateMotion dur="8s" begin="0s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#hero-signal-a"></mpath>
+                </animateMotion>
+              </circle>
+              <circle class="signal-dot" r="9">
+                <animateMotion dur="9s" begin="-2.2s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#hero-signal-b"></mpath>
+                </animateMotion>
+              </circle>
+              <circle class="signal-dot" r="9">
+                <animateMotion dur="8.5s" begin="-4.1s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#hero-signal-c"></mpath>
+                </animateMotion>
+              </circle>
+              <circle class="signal-dot" r="9">
+                <animateMotion dur="7.5s" begin="-5.6s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#hero-signal-d"></mpath>
                 </animateMotion>
               </circle>
             </g>
-            <g class="scene-code">
-              <text x="782" y="325">ASTRO</text>
-              <text x="950" y="608">AI</text>
-              <text x="690" y="720">TRACK</text>
+            <g class="scene-layer scene-layer-fast">
+              <rect class="scene-chip large-chip" x="750" y="230" width="230" height="170" rx="14"></rect>
+              <path class="chip-pins" d="M724 258 H750 M724 292 H750 M724 326 H750 M724 360 H750"></path>
+              <path class="chip-pins" d="M980 258 H1008 M980 292 H1008 M980 326 H1008 M980 360 H1008"></path>
             </g>
           </svg>
         </div>
@@ -149,50 +151,101 @@ const navItems = [
 
           <div class="hero-visual" aria-label="Technology system illustration">
             <div class="chip-panel">
+              <img
+                class="chip-photo"
+                src="/assets/images/motherboard-background.jpg"
+                alt=""
+                width="2048"
+                height="921"
+              />
               <svg class="processor-svg" viewBox="0 0 520 520" role="img" aria-labelledby="processor-title">
-                <title id="processor-title">Modern processor chip and circuit illustration</title>
+                <title id="processor-title">Realistic processor chip and circuit illustration</title>
                 <defs>
+                  <linearGradient id="processor-package" x1="0%" x2="100%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#eff8ff"></stop>
+                    <stop offset="18%" stop-color="#7f9bab"></stop>
+                    <stop offset="48%" stop-color="#1a2630"></stop>
+                    <stop offset="72%" stop-color="#0b1117"></stop>
+                    <stop offset="100%" stop-color="#e4f0f8"></stop>
+                  </linearGradient>
+                  <linearGradient id="processor-plate" x1="12%" x2="88%" y1="0%" y2="100%">
+                    <stop offset="0%" stop-color="#f7fbff"></stop>
+                    <stop offset="32%" stop-color="#a7c3d3"></stop>
+                    <stop offset="64%" stop-color="#253542"></stop>
+                    <stop offset="100%" stop-color="#061019"></stop>
+                  </linearGradient>
                   <linearGradient id="processor-core" x1="0%" x2="100%" y1="0%" y2="100%">
-                    <stop offset="0%" stop-color="#2fffd0"></stop>
-                    <stop offset="50%" stop-color="#8bd450"></stop>
-                    <stop offset="100%" stop-color="#ffb454"></stop>
+                    <stop offset="0%" stop-color="#1fc78f"></stop>
+                    <stop offset="42%" stop-color="#08281d"></stop>
+                    <stop offset="100%" stop-color="#010706"></stop>
                   </linearGradient>
-                  <linearGradient id="processor-glass" x1="0%" x2="100%" y1="0%" y2="100%">
-                    <stop offset="0%" stop-color="#18212b"></stop>
-                    <stop offset="100%" stop-color="#080b10"></stop>
-                  </linearGradient>
+                  <pattern id="processor-pad-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <rect width="10" height="10" fill="#132b24"></rect>
+                    <circle cx="5" cy="5" r="2.5" fill="#b8ffd0" opacity="0.9"></circle>
+                  </pattern>
+                  <radialGradient id="processor-glow" cx="50%" cy="50%" r="55%">
+                    <stop offset="0%" stop-color="#2fffd0" stop-opacity="0.46"></stop>
+                    <stop offset="70%" stop-color="#2fffd0" stop-opacity="0.08"></stop>
+                    <stop offset="100%" stop-color="#2fffd0" stop-opacity="0"></stop>
+                  </radialGradient>
+                  <filter id="processor-shadow" x="-20%" y="-20%" width="140%" height="150%">
+                    <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#000000" flood-opacity="0.55"></feDropShadow>
+                    <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#2fffd0" flood-opacity="0.18"></feDropShadow>
+                  </filter>
                 </defs>
+                <rect class="board-haze" x="0" y="0" width="520" height="520" rx="18"></rect>
                 <g class="board-grid">
-                  <path d="M45 115 H135 V70 H220"></path>
-                  <path d="M38 382 H145 V435 H230"></path>
-                  <path d="M288 72 H390 V128 H486"></path>
-                  <path d="M312 445 H402 V370 H490"></path>
-                  <path d="M70 260 H158"></path>
-                  <path d="M362 260 H468"></path>
-                  <path d="M260 60 V148"></path>
-                  <path d="M260 372 V462"></path>
+                  <path id="chip-signal-a" d="M34 124 H120 V90 H236 V150"></path>
+                  <path id="chip-signal-b" d="M36 390 H135 V336 H150"></path>
+                  <path id="chip-signal-c" d="M486 126 H400 V178 H370"></path>
+                  <path id="chip-signal-d" d="M486 394 H394 V344 H370"></path>
+                  <path d="M70 260 H150"></path>
+                  <path d="M370 260 H474"></path>
+                  <path d="M260 44 V150"></path>
+                  <path d="M260 370 V472"></path>
                 </g>
-                <g class="board-nodes">
-                  <circle cx="220" cy="70" r="8"></circle>
-                  <circle cx="230" cy="435" r="8"></circle>
-                  <circle cx="486" cy="128" r="8"></circle>
-                  <circle cx="490" cy="370" r="8"></circle>
-                  <circle cx="70" cy="260" r="8"></circle>
-                  <circle cx="468" cy="260" r="8"></circle>
+                <g class="board-vias">
+                  <circle cx="34" cy="124" r="5"></circle>
+                  <circle cx="120" cy="90" r="5"></circle>
+                  <circle cx="236" cy="150" r="5"></circle>
+                  <circle cx="36" cy="390" r="5"></circle>
+                  <circle cx="135" cy="336" r="5"></circle>
+                  <circle cx="150" cy="336" r="5"></circle>
+                  <circle cx="486" cy="126" r="5"></circle>
+                  <circle cx="400" cy="178" r="5"></circle>
+                  <circle cx="370" cy="178" r="5"></circle>
+                  <circle cx="486" cy="394" r="5"></circle>
+                  <circle cx="394" cy="344" r="5"></circle>
+                  <circle cx="370" cy="344" r="5"></circle>
+                  <circle cx="70" cy="260" r="5"></circle>
+                  <circle cx="474" cy="260" r="5"></circle>
+                  <circle cx="260" cy="44" r="5"></circle>
+                  <circle cx="260" cy="472" r="5"></circle>
                 </g>
-                <rect class="chip-shell" x="150" y="150" width="220" height="220" rx="22"></rect>
-                <path class="pins pins-left" d="M122 183 H150 M122 218 H150 M122 253 H150 M122 288 H150 M122 323 H150"></path>
-                <path class="pins pins-right" d="M370 183 H398 M370 218 H398 M370 253 H398 M370 288 H398 M370 323 H398"></path>
-                <path class="pins pins-top" d="M183 122 V150 M218 122 V150 M253 122 V150 M288 122 V150 M323 122 V150"></path>
-                <path class="pins pins-bottom" d="M183 370 V398 M218 370 V398 M253 370 V398 M288 370 V398 M323 370 V398"></path>
-                <rect class="chip-core" x="202" y="202" width="116" height="116" rx="18"></rect>
-                <path class="core-lines" d="M225 238 H294 M225 260 H294 M225 282 H274"></path>
+                <ellipse class="processor-backlight" cx="260" cy="260" rx="170" ry="150"></ellipse>
+                <g class="processor-package" filter="url(#processor-shadow)">
+                  <rect class="chip-substrate" x="128" y="128" width="264" height="264" rx="18"></rect>
+                  <path class="pins pins-left" d="M98 166 H128 M98 194 H128 M98 222 H128 M98 250 H128 M98 278 H128 M98 306 H128 M98 334 H128 M98 362 H128"></path>
+                  <path class="pins pins-right" d="M392 166 H422 M392 194 H422 M392 222 H422 M392 250 H422 M392 278 H422 M392 306 H422 M392 334 H422 M392 362 H422"></path>
+                  <path class="pins pins-top" d="M166 98 V128 M194 98 V128 M222 98 V128 M250 98 V128 M278 98 V128 M306 98 V128 M334 98 V128 M362 98 V128"></path>
+                  <path class="pins pins-bottom" d="M166 392 V422 M194 392 V422 M222 392 V422 M250 392 V422 M278 392 V422 M306 392 V422 M334 392 V422 M362 392 V422"></path>
+                  <rect class="chip-shell" x="148" y="148" width="224" height="224" rx="14"></rect>
+                  <path class="chip-bevel chip-bevel-top" d="M148 148 H372 L350 170 H170 Z"></path>
+                  <path class="chip-bevel chip-bevel-bottom" d="M170 350 H350 L372 372 H148 Z"></path>
+                  <rect class="chip-plate" x="168" y="168" width="184" height="184" rx="10"></rect>
+                  <rect class="chip-pad-field" x="187" y="187" width="146" height="146" rx="7"></rect>
+                  <rect class="chip-core" x="224" y="224" width="72" height="72" rx="5"></rect>
+                  <g class="core-grid">
+                    <path d="M238 242 H282 M238 260 H282 M238 278 H282"></path>
+                    <path d="M242 238 V282 M260 238 V282 M278 238 V282"></path>
+                  </g>
+                  <path class="chip-reflection" d="M174 174 H346 L318 202 H202 Z"></path>
+                </g>
               </svg>
             </div>
             <div class="hero-facts" aria-label="Portfolio highlights">
               <span><strong>6+</strong> years experience</span>
               <span><strong>4</strong> featured works</span>
-              <span><strong>AI</strong> assisted delivery</span>
             </div>
           </div>
         </div>
@@ -215,7 +268,7 @@ const navItems = [
               I am a Web Developer with 6+ years of experience creating fast, reliable websites for
               service businesses, ecommerce brands, and lead-generation campaigns. My work combines
               WordPress builders like Elementor and Divi with PHP, custom post types, WooCommerce,
-              Shopify, Astro, SVG animations, website optimization, SEO, and AI-assisted coding.
+              Shopify, SVG animations, website optimization, and SEO.
             </p>
             <p>
               I also help connect the marketing side of a site: Go High Level, automations, Google
@@ -291,22 +344,11 @@ const navItems = [
               <path class="circuit-line" d="M-70 690 H160 V590 H330 V470 H555 V360 H720"></path>
               <path class="circuit-line muted" d="M120 820 H350 V735 H540 V655 H790 V545 H1230"></path>
               <path class="circuit-line muted" d="M610 165 H780 V260 H980 V210 H1270"></path>
-              <path id="contact-signal-path" class="signal-track" d="M255 625 H430 V535 H590 V430 H790"></path>
             </g>
             <g class="scene-layer scene-layer-fast">
               <rect class="scene-chip contact-chip" x="790" y="330" width="250" height="170" rx="14"></rect>
               <path class="chip-pins" d="M760 365 H790 M760 400 H790 M760 435 H790 M1040 365 H1070 M1040 400 H1070 M1040 435 H1070"></path>
-              <circle class="scene-node node-d" cx="555" cy="360" r="14"></circle>
-              <circle class="scene-node node-e" cx="980" cy="210" r="18"></circle>
-              <circle class="signal-dot signal-dot-alt" r="9">
-                <animateMotion dur="6.5s" repeatCount="indefinite" rotate="auto">
-                  <mpath href="#contact-signal-path"></mpath>
-                </animateMotion>
-              </circle>
-            </g>
-            <g class="scene-code contact-code">
-              <text x="828" y="422">deploy()</text>
-              <text x="640" y="335">reply</text>
+              <path id="contact-signal-path" class="signal-track" d="M255 625 H430 V535 H590 V430 H790"></path>
             </g>
           </svg>
         </div>

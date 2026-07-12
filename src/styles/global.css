@@ -276,11 +276,9 @@ p {
   fill: none;
   stroke: url("#hero-circuit");
   stroke-width: 3;
-  stroke-dasharray: 18 18;
   stroke-linecap: round;
   stroke-linejoin: round;
   opacity: 0.42;
-  animation: dash-flow 22s linear infinite;
 }
 
 .contact-scene .circuit-line {
@@ -291,7 +289,6 @@ p {
   stroke: rgba(255, 255, 255, 0.2);
   stroke-width: 2;
   opacity: 0.56;
-  animation-duration: 32s;
 }
 
 .scene-chip {
@@ -299,10 +296,6 @@ p {
   stroke: rgba(47, 255, 208, 0.3);
   stroke-width: 2;
   filter: drop-shadow(0 28px 34px rgba(0, 0, 0, 0.36));
-}
-
-.small-chip {
-  stroke: rgba(255, 180, 84, 0.42);
 }
 
 .contact-chip {
@@ -317,40 +310,13 @@ p {
   stroke-linecap: round;
 }
 
-.scene-node {
-  fill: var(--aqua);
-  opacity: 0.86;
-  animation: node-pulse 4s ease-in-out infinite;
-}
-
-.node-b,
-.node-e {
-  fill: var(--amber);
-  animation-delay: -1.2s;
-}
-
-.node-c,
-.node-d {
-  fill: var(--green);
-  animation-delay: -2.1s;
-}
-
-.scene-code text {
-  fill: rgba(247, 251, 247, 0.42);
-  font-family: var(--font-tech);
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
 .signal-track {
   fill: none;
-  stroke: rgba(47, 255, 208, 0.54);
+  stroke: rgba(47, 255, 208, 0.64);
   stroke-width: 3;
-  stroke-dasharray: 14 16;
   stroke-linecap: round;
   stroke-linejoin: round;
-  opacity: 0.78;
+  opacity: 0.84;
 }
 
 .signal-dot {
@@ -359,33 +325,6 @@ p {
     drop-shadow(0 0 6px rgba(47, 255, 208, 0.95))
     drop-shadow(0 0 18px rgba(47, 255, 208, 0.78))
     drop-shadow(0 0 34px rgba(47, 255, 208, 0.45));
-}
-
-.signal-dot-alt {
-  fill: var(--amber);
-  filter:
-    drop-shadow(0 0 6px rgba(255, 180, 84, 0.95))
-    drop-shadow(0 0 18px rgba(255, 180, 84, 0.78))
-    drop-shadow(0 0 34px rgba(255, 180, 84, 0.45));
-}
-
-@keyframes dash-flow {
-  to {
-    stroke-dashoffset: -240;
-  }
-}
-
-@keyframes node-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.86;
-  }
-
-  50% {
-    transform: scale(1.18);
-    opacity: 0.52;
-  }
 }
 
 .hero {
@@ -478,27 +417,28 @@ p {
 
 .chip-panel {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   width: min(430px, 100%);
   aspect-ratio: 1;
   padding: 18px;
   border: 1px solid rgba(47, 255, 208, 0.22);
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(47, 255, 208, 0.12), transparent 28%),
-    linear-gradient(315deg, rgba(255, 180, 84, 0.12), transparent 32%),
-    rgba(8, 12, 15, 0.86);
+  background: #041013;
   box-shadow: var(--shadow);
 }
 
 .chip-panel::before,
 .chip-panel::after {
   position: absolute;
+  z-index: 3;
   width: 70px;
   height: 70px;
   border-color: var(--aqua);
   border-style: solid;
   content: "";
   opacity: 0.9;
+  pointer-events: none;
 }
 
 .chip-panel::before {
@@ -513,47 +453,123 @@ p {
   border-width: 0 2px 2px 0;
 }
 
+.chip-photo {
+  position: absolute;
+  z-index: 0;
+  inset: -7%;
+  width: 114%;
+  height: 114%;
+  opacity: 0.9;
+  filter: saturate(1.42) contrast(1.18) brightness(0.82);
+  object-fit: cover;
+  object-position: center;
+  transform: rotate(-2deg) scale(1.07);
+}
+
 .processor-svg {
+  position: relative;
+  z-index: 2;
   width: 100%;
   height: 100%;
+  overflow: visible;
+}
+
+.board-haze {
+  fill: rgba(1, 8, 12, 0.28);
 }
 
 .board-grid path {
   fill: none;
-  stroke: rgba(47, 255, 208, 0.42);
-  stroke-width: 5;
+  stroke: rgba(94, 226, 255, 0.68);
+  stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
+  filter: drop-shadow(0 0 5px rgba(47, 255, 208, 0.48));
 }
 
-.board-nodes circle {
-  fill: var(--amber);
-  opacity: 0.94;
+.board-vias circle {
+  fill: var(--aqua);
+  filter:
+    drop-shadow(0 0 4px rgba(47, 255, 208, 0.72))
+    drop-shadow(0 0 10px rgba(47, 255, 208, 0.28));
+}
+
+.processor-backlight {
+  fill: url("#processor-glow");
+}
+
+.chip-substrate {
+  fill: rgba(5, 10, 13, 0.92);
+  stroke: rgba(210, 236, 244, 0.2);
+  stroke-width: 2;
 }
 
 .chip-shell {
-  fill: url("#processor-glass");
-  stroke: rgba(255, 255, 255, 0.18);
-  stroke-width: 2;
+  fill: url("#processor-package");
+  stroke: rgba(255, 255, 255, 0.38);
+  stroke-width: 1.5;
+}
+
+.chip-bevel {
+  opacity: 0.52;
+  pointer-events: none;
+}
+
+.chip-bevel-top {
+  fill: rgba(255, 255, 255, 0.42);
+}
+
+.chip-bevel-bottom {
+  fill: rgba(0, 0, 0, 0.42);
 }
 
 .pins {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.52);
-  stroke-width: 6;
+  stroke: rgba(238, 250, 255, 0.82);
+  stroke-width: 4;
   stroke-linecap: round;
+  filter:
+    drop-shadow(0 0 2px rgba(255, 255, 255, 0.45))
+    drop-shadow(0 0 5px rgba(94, 226, 255, 0.25));
+}
+
+.chip-plate {
+  fill: url("#processor-plate");
+  stroke: rgba(255, 255, 255, 0.58);
+  stroke-width: 1.5;
+  opacity: 0.9;
+}
+
+.chip-pad-field {
+  fill: url("#processor-pad-grid");
+  stroke: rgba(200, 255, 220, 0.46);
+  stroke-width: 1.4;
+  filter:
+    drop-shadow(0 0 5px rgba(47, 255, 208, 0.3))
+    drop-shadow(0 0 14px rgba(47, 255, 208, 0.16));
 }
 
 .chip-core {
   fill: url("#processor-core");
+  stroke: rgba(181, 255, 216, 0.42);
+  stroke-width: 1.2;
   opacity: 0.96;
+  filter:
+    drop-shadow(0 7px 10px rgba(0, 0, 0, 0.48))
+    drop-shadow(0 0 8px rgba(47, 255, 208, 0.22));
 }
 
-.core-lines {
+.core-grid path {
   fill: none;
-  stroke: rgba(6, 16, 13, 0.78);
-  stroke-width: 8;
+  stroke: rgba(181, 255, 216, 0.42);
+  stroke-width: 1.8;
   stroke-linecap: round;
+}
+
+.chip-reflection {
+  fill: rgba(255, 255, 255, 0.2);
+  opacity: 0.38;
+  pointer-events: none;
 }
 
 .hero-facts {
@@ -1021,10 +1037,6 @@ p {
   .hero-scene,
   .contact-scene {
     opacity: 0.64;
-  }
-
-  .scene-code {
-    display: none;
   }
 
   .scene-chip {
